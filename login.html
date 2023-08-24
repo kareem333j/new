@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css.map">
+  <title>Karem | Login</title>
+
+  <style>
+    .register{
+      background-color: #eff7fa;
+    }
+    .register form{
+      background-color: #fff;
+    }
+    .register-link{
+      text-decoration: none;
+    }
+    .register-link:hover{
+      text-decoration:underline;
+    }
+    @media (max-width: 768px) {
+      .register{
+        width: 100%;
+      }
+      .register form{
+        width: 90%;
+      }
+    }
+    .made{
+        display: flex;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+  </style>
+
+</head>
+<body>
+    <div class="register d-flex justify-content-center align-items-center flex-column">
+        <form class="login" id="login-form" method="POST">
+            <div class="mb-4 text-center">
+                <h1>Login</h1>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Username</label>
+              <input type="text" name="username" class="form-control l-user wanted" aria-describedby="emailHelp" autofocus>
+              <div id="emailHelp" class="form-text u-help"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" name="password" class="form-control l-pass wanted" id="pass-login">
+              <div id="emailHelp" class="form-text p-help"></div>
+            </div>
+            <div class="mb-3 form-check">
+              <input style="cursor: pointer;" type="checkbox"  class="form-check-input" id="exampleCheck1">
+              <label style="cursor: pointer;" class="form-check-label" for="exampleCheck1">Show password</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+          <div id="emailHelp" class="form-text p-help d-flex justify-content-between"><p style="margin-right: 10px;font-size:1.1em">you don't have an account?</p> <a class="register-link" href="register.html">Register</a></div>
+
+    </div>
+    <div class="made">
+        <p>This Project Made By Karem Magdy❤️</p>
+    </div>
+    <script>
+      let passInput = document.querySelector('[name="password"]');
+      let showPass = document.querySelector(".form-check input");
+      showPass.addEventListener('click', ()=>{
+        if(passInput.type === "password"){
+          passInput.type = "text";
+        }else if(passInput.type === "text"){
+          passInput.type = "password";
+        }
+      })
+    </script>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
